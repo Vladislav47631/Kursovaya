@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic"
+      rel="stylesheet"
+    />
+    <title>Домашняя страница</title>
+
+    <style>
+      .itcss__items {
+        counter-reset: slide;
+      }
+
+      .itcss__item {
+        counter-increment: slide;
+      }
+
+      .itcss__item > div::before {
+        content: counter(slide);
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: #fff;
+        font-style: italic;
+        font-size: 32px;
+        font-weight: bold;
+      }
+    </style>
+    <!-- Подключаем JS слайдера -->
+    <script defer src="js/simple-adaptive-slider.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // активация слайдера
+        new ItcSimpleSlider(".itcss", {
+          loop: true,
+          autoplay: true,
+          swipe: true,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper_full">
+        <div class="header_inner">
+          <div class="logo">
+            <a href="/">
+              <img src="./image/лого.png" alt="LOGO" class="logo_title" />
+            </a>
+          </div>
+          <nav>
+            <a class="nav-link" href="#index">Главная</a>
+            <a class="nav-link" href="#genre">Жанры</a>
+            <a class="nav-link" href="#post">Постановки</a>
+            <a class="nav-link" href="#actor">Актёры</a>
+            <a class="nav-link" href="#video">Видео</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section id="index">
+      <div class="content_container">
+        <div class="wrapper_full">
+          <h1 class="intro_title"><span>ТЕАТР</span></h1>
+          <p class="intro_subtitle">
+            <span>ТЕАТР</span> (от греч. theatron – места для зрелища, зрелище),
+            основной род зрелищного искусства. Происхождение термина связано с
+            древнегреческим античным театром, где именно так назывались места в
+            зрительном зале (от греческого глагола «теаомай» – смотрю)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="genre">
+      <div class="wrapper_full">
+        <div class="genre_wrapp">
+          <h2 class="genre_title">Жанры театрального искусства</h2>
+          <div class="genre_cards">
+            <div class="genre_card">
+              <div class="genre_card_pic">
+                <img
+                  src="./image/лого_жанров/comedy.png"
+                  alt="Comedy genre"
+                  class="genre_card_thumb"
+                />
+              </div>
+              <h3 class="genre_card_title">Комедия</h3>
+              <a href="./comedy.html" class="genre_card_more" target="_blank"
+                >LEARN MORE</a
+              >
+            </div>
+            <div class="genre_card">
+              <div class="genre_card_pic">
+                <img
+                  src="./image/лого_жанров/melodrama.png"
+                  alt="Ballet genre"
+                  class="genre_card_thumb"
+                />
+              </div>
+              <h3 class="genre_card_title">Мелодрама</h3>
+              <a href="./melodrama.html" class="genre_card_more" target="_blank"
+                >LEARN MORE</a
+              >
+            </div>
+            <div class="genre_card">
+              <div class="genre_card_pic">
+                <img
+                  src="./image/лого_жанров/drama.png"
+                  alt="Drama genre"
+                  class="genre_card_thumb"
+                />
+              </div>
+              <h3 class="genre_card_title">Драма</h3>
+              <a href="./drama.html" class="genre_card_more" target="_blank"
+                >LEARN MORE</a
+              >
+            </div>
+            <div class="genre_card">
+              <div class="genre_card_pic">
+                <img
+                  src="./image/лого_жанров/mime.png"
+                  alt="Mime genre"
+                  class="genre_card_thumb"
+                />
+              </div>
+              <h3 class="genre_card_title">Пантомима</h3>
+              <a href="./mime.html" class="genre_card_more" target="_blank"
+                >LEARN MORE</a
+              >
+            </div>
+            <div class="genre_card">
+              <div class="genre_card_pic">
+                <img
+                  src="./image/лого_жанров/opera.png"
+                  alt="Opera genre"
+                  class="genre_card_thumb"
+                />
+              </div>
+              <h3 class="genre_card_title">Опера</h3>
+              <a href="./opera.html" class="genre_card_more" target="_blank"
+                >LEARN MORE</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="post">
+      <div class="posts">
+        <div class="wrapper_full">
+          <h2 class="post_title">Постановки</h2>
+          <div class="posts_post post">
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./image/гамлет.jpg" />
+                <div class="text">Гамлет</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./image/отелло.jpg" />
+                <div class="text">Отелло</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./image/ромео_джульета.jpg" />
+                <div class="text">Ромео и Джульета</div>
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="post_info">
+              <h3 class="post_secondary_title">Уильям Шекспир</h3>
+              <p class="post_desc">
+                Пьесы Уильяма Шекспира - это просто золотая жила: увлекательные
+                сюжеты, которые легко можно переложить на любую эпоху, отличные
+                монологи, которые запоминаются, даже если их в школе не учить, и
+                жизненная философия.
+              </p>
+              <a href="#" class="post_more">VIEW PREFECTURE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="actor">
+      <div class="wrapper_full">
+        <div class="actor_container">
+          <h2 class="actor_title">Известные актёры</h2>
+        </div>
+        <div class="actor_container_cards">
+          <div class="actor_card">
+            <div class="after">
+              <div class="effect-to-bottom">
+                <h3>Вениамин Смехов</h3>
+                <p>
+                  Советский и российский актёр театра, кино, телевидения и
+                  дубляжа, режиссёр телеспектаклей и документального кино,
+                  сценарист, телеведущий, литератор
+                </p>
+                <center>
+                  <button class="more_button" type="submit">
+                    <a
+                      href="https://ru.wikipedia.org/wiki/Смехов,_Вениамин_Борисович"
+                      target="_blank"
+                      >Подробнее</a
+                    >
+                  </button>
+                </center>
+              </div>
+              <img src="./image/Actor/Вениамин Смехов.jpg" alt="" />
+            </div>
+          </div>
+          <div class="actor_card">
+            <div class="after">
+              <div class="effect-to-bottom">
+                <h3>Евгений Евстигнеев</h3>
+                <p>
+                  Советский и российский актёр театра и кино, театральный
+                  педагог; народный артист СССР (1983), лауреат Государственной
+                  премии СССР (1974)
+                </p>
+                <center>
+                  <button class="more_button" type="submit">
+                    <a
+                      href="https://ru.wikipedia.org/wiki/Евстигнеев,_Евгений_Александрович"
+                      target="_blank"
+                      >Подробнее</a
+                    >
+                  </button>
+                </center>
+              </div>
+              <img src="./image/Actor/Евгений Евстигнеев.jpg" alt="" />
+            </div>
+          </div>
+          <div class="actor_card">
+            <div class="after">
+              <div class="effect-to-bottom">
+                <h3>Константин Хабенский</h3>
+                <p>
+                  Советский и российский актёр театра, кино, телевидения,
+                  озвучивания и дубляжа, кинорежиссёр, сценарист, продюсер,
+                  общественный деятель; народный артист Российской Федерации
+                  (2012), лауреат Государственной премии Российской Федерации
+                  (2019)
+                </p>
+                <center>
+                  <button class="more_button" type="submit">
+                    <a
+                      href="https://ru.wikipedia.org/wiki/Хабенский,_Константин_Юрьевич"
+                      target="_blank"
+                      >Подробнее</a
+                    >
+                  </button>
+                </center>
+              </div>
+              <img src="./image/Actor/Константин Хабенский.jpg" alt="" />
+            </div>
+          </div>
+          <div class="actor_card">
+            <div class="after">
+              <div class="effect-to-bottom">
+                <h3>Михаил Ульянов</h3>
+                <p>
+                  Советский и российский актёр театра и кино, режиссёр, педагог,
+                  общественный деятель. Герой Социалистического Труда (1986),
+                  народный артист СССР (1969), заслуженный деятель культуры
+                  Польши (1974), лауреат Ленинской премии (1966)
+                </p>
+                <center>
+                  <button class="more_button" type="submit">
+                    <a
+                      href="https://ru.wikipedia.org/wiki/Ульянов,_Михаил_Александрович"
+                      target="_blank"
+                      >Подробнее</a
+                    >
+                  </button>
+                </center>
+              </div>
+              <img src="./image/Actor/Михаил Ульянов.jpg" alt="" />
+            </div>
+          </div>
+          <div class="actor_card">
+            <div class="after">
+              <div class="effect-to-bottom">
+                <h3>Сергей Безруков</h3>
+                <p>
+                  Российский актёр театра, кино, телевидения, озвучивания и
+                  дубляжа, театральный режиссёр, сценарист, продюсер, певец,
+                  пародист, гитарист, рок-музыкант; народный артист Российской
+                  Федерации (2008), лауреат Государственной премии Российской
+                  Федерации (1997)
+                </p>
+                <center>
+                  <button class="more_button" type="submit">
+                    <a
+                      href="https://ru.wikipedia.org/wiki/Безруков,_Сергей_Витальевич"
+                      target="_blank"
+                      >Подробнее</a
+                    >
+                  </button>
+                </center>
+              </div>
+              <img src="./image/Actor/Сергей Безруков.jpg" alt="" />
+            </div>
+          </div>
+          <div class="actor_card">
+            <div class="after">
+              <div class="effect-to-bottom">
+                <h3>Олег Янковский</h3>
+                <p>
+                  Cоветский и российский актёр театра, кино и озвучивания,
+                  кинорежиссёр; народный артист СССР (1991), лауреат двух
+                  Государственных премий Российской Федерации (1996, 2002)
+                </p>
+                <center>
+                  <button class="more_button" type="submit">
+                    <a
+                      href="https://ru.wikipedia.org/wiki/Янковский,_Олег_Иванович"
+                      target="_blank"
+                      >Подробнее</a
+                    >
+                  </button>
+                </center>
+              </div>
+              <img src="./image/Actor/Олег Янковский.jpeg" alt="" />
+            </div>
+          </div>
+          <div class="actor_card">
+            <div class="after">
+              <div class="effect-to-bottom">
+                <h3>Олег Меньшиков</h3>
+                <p>
+                  Cоветский и российский актёр театра и кино, театральный
+                  режиссёр и педагог, народный артист Российской Федерации
+                  (2003). Лауреат трёх Государственных премий РФ (1995, 1997,
+                  1999)
+                </p>
+                <center>
+                  <button class="more_button" type="submit">
+                    <a
+                      href="https://ru.wikipedia.org/wiki/Меньшиков,_Олег_Евгеньевич"
+                      target="_blank"
+                      >Подробнее</a
+                    >
+                  </button>
+                </center>
+              </div>
+              <img src="./image/Actor/Олег Меньшиков.jpg" alt="" />
+            </div>
+          </div>
+          <div class="actor_card">
+            <div class="after">
+              <div class="effect-to-bottom">
+                <h3>Анатолий Васильев</h3>
+                <p>
+                  Cоветский и российский актёр театра и кино; народный артист
+                  Российской Федерации (1994)
+                </p>
+                <center>
+                  <button class="more_button" type="submit">
+                    <a
+                      href="https://ru.wikipedia.org/wiki/Васильев,_Анатолий_Александрович_(актёр)"
+                      target="_blank"
+                      >Подробнее</a
+                    >
+                  </button>
+                </center>
+              </div>
+              <img src="./image/Actor/Анатолий Васильев.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="video">
+      <div class="videos">
+        <div class="wrapper_full">
+          <video controls>
+            <source src="./video/Что такое театр.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section> -->
+
+    <footer class="footer">
+      <div class="wrapper_full">
+        <div class="footer_item">
+          <div class="footer_logo">
+            <a href="#home" class="footer_logo">
+              <img
+                src="./image/лого.png"
+                alt="Theatre"
+                class="footer_logo_pic"
+                width="150px"
+              />
+            </a>
+          </div>
+          <nav class="footer_nav">
+            <ul class="footer_menu">
+              <li class="footer_item">
+                <h3 class="footer_menu_title">Театры</h3>
+              </li>
+              <li class="footer_item">
+                <a
+                  href="https://2011.bolshoi.ru/"
+                  class="footer_menu_link"
+                  target="_blank"
+                  >Большой театр</a
+                >
+              </li>
+              <li class="footer_item">
+                <a
+                  href="https://www.maly.ru/"
+                  class="footer_menu_link"
+                  target="_blank"
+                  >Малый театр</a
+                >
+              </li>
+              <li class="footer_item">
+                <a
+                  href="https://moscowtyz.ru/"
+                  class="footer_menu_link"
+                  target="_blank"
+                  >Московский театр юного зрителя</a
+                >
+              </li>
+              <li class="footer_item">
+                <a
+                  href="https://sovremennik.ru/"
+                  class="footer_menu_link"
+                  target="_blank"
+                  >Современник</a
+                >
+              </li>
+            </ul>
+
+            <ul class="footer_menu">
+              <li class="footer_item">
+                <h3 class="footer_menu_title">Мои социальные сети</h3>
+              </li>
+              <li class="footer_item">
+                <a
+                  href="https://vk.com/redlight47"
+                  class="footer_menu_link"
+                  target="_blank"
+                  >VKontakte</a
+                >
+              </li>
+              <li class="footer_item">
+                <a
+                  href="https://t.me/Red_light_47"
+                  class="footer_menu_link"
+                  target="_blank"
+                  >Telegram</a
+                >
+              </li>
+              <li class="footer_item">
+                <a
+                  href="https://instagram.com/red_light_47?igshid=N2ZiY2E3YmU="
+                  target="_blank"
+                  class="footer_menu_link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="footer_item">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100014544872862&mibextid=ZbWKwL"
+                  target="_blank"
+                  class="footer_menu_link"
+                  >Facebook</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script src="./script/main.js"></script>
+  </body>
+</html>
